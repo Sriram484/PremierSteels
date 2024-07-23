@@ -1,0 +1,98 @@
+.NavBar-Content{
+    position: fixed; /* or absolute/relative based on your layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000; /* Ensure this value is high enough */
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    color: aliceblue;
+}
+
+
+header .logo {
+    font-size: 50px;
+    color: #595c5c;
+    color: aliceblue;
+}
+
+header .navbar ul {
+    list-style: none;
+    color: aliceblue;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+    color: aliceblue;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #595c5c;
+    display: block;
+    color: aliceblue;
+}
+
+header .navbar ul li a:hover {
+    color: rgb(33, 33, 33);
+    color: aliceblue;
+}
+
+#menu_bar {
+    font-size: 50px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    color: aliceblue;
+}
+#menu_check {
+    display: none;
+    color: aliceblue;
+  }
+  
+  @media (max-width: 600px) {
+    header .logo,
+    #menu_bar {
+      font-size: 30px;
+    }
+    header {
+      padding: 20px;
+    }
+    #menu_bar {
+      display: initial;
+    }
+    header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: 999;
+      border-top: 1px solid rbga(0, 0, 0, 1);
+      display: none;
+    }
+    header .navbar ul li {
+      position: relative;
+      width: fit-content;
+      right: 0;
+      width: 100%;
+    }
+    #menu_check:checked ~ .navbar {
+      display: initial;
+    }
+  }
+  
